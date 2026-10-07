@@ -31,3 +31,13 @@ Mở `index.html` trực tiếp bằng trình duyệt, hoặc chạy một stati
 Trang chưa được publish. Không có analytics hay request bên ngoài khi tải trang; các link tải chỉ mở khi người dùng nhấp vào.
 
 
++
++## Chính sách riêng tư
++
++`privacy.html` có tiếng Việt và tiếng Anh, dùng chung `styles.css`, không cần JavaScript để đọc. Trang chủ có liên kết tại footer.
++
++Workflow hiện tại upload gốc repository nên sẽ đưa trang này lên cùng website khi push lên main. URL dự kiến với cấu hình GitHub Pages mặc định: https://evilartist.github.io/PCScanner-Introduce/privacy.html (nếu dùng tên miền riêng, thay bằng tên miền thực tế).
++
++Email trong chính sách hiện là privacy@example.com theo yêu cầu của chủ dự án. Đây là địa chỉ mẫu; thay cả hai phiên bản tiếng Việt/Anh bằng email thật và bỏ câu ghi chú email mẫu trước khi dùng URL này trên Google Play.
++
++Nội dung dựa trên luồng LAN v2 và lưu trữ hiện tại. Khi thay đổi SDK, dịch vụ, thời hạn lưu hoặc cơ chế xóa, cập nhật cả hai ngôn ngữ và Data safety. Cần thêm liên kết chính sách trong app ở một thay đổi riêng.

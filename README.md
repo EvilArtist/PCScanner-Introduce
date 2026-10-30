@@ -5,13 +5,13 @@ Website tĩnh HTML + CSS + JavaScript, không cần ảnh, thư viện ngoài ho
 ## Chỉnh link tải
 
 Sửa `downloads` trong `app.js`:
-- `desktop.url`: link tệp cài Windows hoặc trang GitHub Releases.
-- `mobile.url`: link tham gia thử nghiệm Google Play, link APK, hoặc trang app khi đã công khai.
+- `desktop.url`: link PCScanner trên Microsoft Store.
+- `mobile.url`: link PCScanner trên Google Play.
 - Sửa `label` và `note` tương ứng với trạng thái phát hành thực tế.
 
 Đồng thời cập nhật href và ghi chú tương ứng trong `index.html` để người tắt JavaScript vẫn thấy link đúng.
 
-Hiện link Windows mở trang Releases của repository desktop. Nút Android dùng link tạm do chủ dự án cung cấp: https://googleplay.com/example/updatelater. Thay bằng link opt-in thật từ tab Testers trong app.js và index.html trước khi chia sẻ trang cho người dùng. Chỉ người có quyền tham gia mới tải được bản internal.
+Link Windows mở Microsoft Store. Link Android mở Google Play với mã ứng dụng com.nguyenxuanloc.pcscanner.
 
 ## Publish lên GitHub Pages
 

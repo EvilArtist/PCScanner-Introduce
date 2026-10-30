@@ -1,15 +1,15 @@
 // Chỉnh đường dẫn tại đây. Không cần công cụ build hoặc thư viện bên ngoài.
 const downloads = {
   desktop: {
-    url: 'https://apps.microsoft.com/store/detail/9NVWLB0BNMMJ?cid=DevShareMCLPCS',
-    label: 'Xem bản tải Windows ↗',
-    note: 'Chọn bản phát hành và tệp cài đặt phù hợp trên GitHub Releases.',
+    url: 'https://apps.microsoft.com/detail/9NVWLB0BNMMJ?hl=en-us&gl=VN&ocid=pdpshare',
+    label: 'Tải trên Microsoft Store ↗',
+    note: 'Mở Microsoft Store để cài PCScanner trên máy tính Windows.',
   },
   mobile: {
-    // Thay bằng link opt-in nếu đang thử nghiệm nội bộ hoặc closed testing.
-    url: 'https://googleplay.com/example/updatelater',
-    label: 'Tham gia thử nghiệm Android ↗',
-    note: 'Link tạm thời. Đường dẫn tham gia thử nghiệm chính thức sẽ được cập nhật khi sẵn sàng.',
+
+    url: 'https://play.google.com/store/apps/details?id=com.nguyenxuanloc.pcscanner',
+    label: 'Tải trên Google Play ↗',
+    note: 'Mở Google Play để cài PCScanner trên điện thoại Android.',
   },
 };
 

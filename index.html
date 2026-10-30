@@ -42,21 +42,36 @@
       <div class="section-heading"><div><div class="eyebrow">TẢI ỨNG DỤNG</div><h2>Sẵn sàng cho lần quét đầu tiên.</h2></div><p>Bạn cần cả bản Windows và bản Android để sử dụng PCScanner.</p></div>
       <div class="download-grid">
         <article class="download-card"><div class="platform">DESKTOP <span>01</span></div><h3>PCScanner cho Windows</h3><p>Nhận mã từ điện thoại và nhập dữ liệu trên máy tính.</p>
-          <a id="desktop-download" class="button primary" href="https://apps.microsoft.com/store/detail/9NVWLB0BNMMJ?cid=DevShareMCLPCS" target="_blank" rel="noopener noreferrer">Xem bản tải Windows ↗</a>
-          <p class="download-note" id="desktop-note">Chọn bản phát hành và tệp cài đặt phù hợp trên GitHub Releases.</p></article>
+          <a id="desktop-download" class="button primary" href="https://apps.microsoft.com/detail/9NVWLB0BNMMJ?hl=en-us&amp;gl=VN&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">Tải trên Microsoft Store ↗</a>
+          <p class="download-note" id="desktop-note">Mở Microsoft Store để cài PCScanner trên máy tính Windows.</p></article>
         <article class="download-card mobile-card"><div class="platform">MOBILE <span>02</span></div><h3>PCScanner cho Android</h3><p>Quét QR và mã vạch, ghép nối và gửi mã sang Windows.</p>
-          <a id="mobile-download" class="button primary" href="https://googleplay.com/example/updatelater" target="_blank" rel="noopener noreferrer">Tham gia thử nghiệm Android ↗</a>
-          <p class="download-note" id="mobile-note">Link tạm thời. Đường dẫn tham gia thử nghiệm chính thức sẽ được cập nhật khi sẵn sàng.</p></article>
+          <a id="mobile-download" class="button primary" href="https://play.google.com/store/apps/details?id=com.nguyenxuanloc.pcscanner" target="_blank" rel="noopener noreferrer">Tải trên Google Play ↗</a>
+          <p class="download-note" id="mobile-note">Mở Google Play để cài PCScanner trên điện thoại Android.</p></article>
       </div>
-      <noscript><p class="download-note">Nếu app Android chưa được công khai, hãy sử dụng link tham gia thử nghiệm do nhà phát triển cung cấp.</p></noscript>
+      <noscript><p class="download-note">Cài bản Windows từ Microsoft Store và bản Android từ Google Play bằng các liên kết trên.</p></noscript>
     </section>
     <section class="faq wrap" id="faq"><div class="eyebrow">GIẢI ĐÁP</div><h2>Trước khi bắt đầu.</h2>
-      <details open><summary>Có cần kết nối Internet để gửi mã không?</summary><p>Luồng gửi mã giữa điện thoại và PC hoạt động qua mạng LAN. Bạn vẫn cần Internet để tải ứng dụng từ GitHub hoặc Google Play.</p></details>
+      <details open><summary>Có cần kết nối Internet để gửi mã không?</summary><p>Luồng gửi mã giữa điện thoại và PC hoạt động qua mạng LAN. Bạn vẫn cần Internet để tải ứng dụng từ Microsoft Store hoặc Google Play.</p></details>
       <details><summary>Tôi chỉ cài ứng dụng trên điện thoại được không?</summary><p>Để gửi mã vào Windows, bạn cần cài và mở cả PCScanner desktop trên máy tính.</p></details>
-      <details><summary>Điện thoại không tìm thấy máy tính thì làm gì?</summary><p>Kiểm tra hai thiết bị có cùng mạng LAN, ứng dụng desktop đang mở và tường lửa Windows cho phép PCScanner trên mạng riêng. Wi-Fi khách có thể chặn kết nối giữa các thiết bị.</p></details>
-      <details><summary>Tại sao tôi chưa tải được bản Android?</summary><p>Nếu app đang thử nghiệm nội bộ, hãy dùng tài khoản Google đã được thêm vào danh sách tester, mở link tham gia thử nghiệm và chấp nhận tham gia trước khi cài.</p></details>
+      <details><summary>Điện thoại không tìm thấy máy tính thì làm gì?</summary><p>Kiểm tra hai thiết bị có cùng mạng LAN và ứng dụng desktop đang mở. Chọn đúng Wi-Fi/LAN trên PC, tạo QR mới rồi quét lại. Wi-Fi khách hoặc VPN có thể ảnh hưởng kết nối. Nếu vẫn timeout, xem hướng dẫn mở Windows Firewall ngay bên dưới.</p></details>
+      <details id="faq-firewall">
+        <summary>Làm sao cho phép PCScanner qua Windows Firewall khi kết nối bị timeout?</summary>
+        <p>Cùng Wi-Fi chưa có nghĩa là điện thoại truy cập được máy tính. Windows Firewall có thể chưa cho phép bản PCScanner đang chạy nhận kết nối. Bạn có thể cần tài khoản quản trị để thay đổi thiết lập.</p>
+        <ol class="faq-steps">
+          <li>Trên PC, vào <strong>Settings → Network &amp; Internet → Wi-Fi hoặc Ethernet → mạng đang kết nối</strong>, xem mạng hiện là <strong>Private</strong> hay <strong>Public</strong>. Chỉ chọn Private nếu đây là mạng bạn tin cậy.</li>
+          <li>Nhấn <strong>Win + R</strong>, nhập <code>wf.msc</code>, nhấn Enter và mở <strong>Inbound Rules</strong> (Quy tắc kết nối vào).</li>
+          <li>Tìm <strong>PCScanner</strong>, mở <strong>Properties → Programs and Services</strong>. Kiểm tra đường dẫn trỏ tới đúng file <code>PCScanner.exe</code> đang chạy. Bản Store, bản thử nghiệm và bản build mới có thể dùng đường dẫn khác nhau.</li>
+          <li>Trong <strong>Protocols and Ports</strong>, chọn quy tắc <strong>TCP</strong>. Trong <strong>Advanced → Profiles</strong>, kiểm tra quy tắc áp dụng cho loại mạng Private/Public hiện tại.</li>
+          <li>Ở tab <strong>General</strong>, tích <strong>Enabled</strong>, chọn <strong>Allow the connection</strong>, rồi nhấn <strong>Apply → OK</strong>.</li>
+          <li>Giữ PCScanner mở, tạo QR mới và thử ghép đôi lại. Nếu bản Mobile có mục chẩn đoán, mở biểu tượng mạng và bấm <strong>Kiểm tra TCP</strong> trước khi thử ghép đôi.</li>
+        </ol>
+        <p><strong>Nếu chưa có quy tắc phù hợp:</strong> chọn <strong>Inbound Rules → New Rule → Custom</strong>, chọn đúng file PCScanner, giao thức <strong>TCP</strong> và <strong>Local port</strong> là cổng hiển thị trên Desktop (mặc định <strong>5500</strong>). Ở Scope, giới hạn địa chỉ từ xa là <strong>Local subnet</strong>; chọn <strong>Allow the connection</strong> và loại mạng đang dùng, rồi đặt tên quy tắc là PCScanner LAN.</p>
+        <p><strong>Không cần tắt toàn bộ firewall.</strong> Nếu có quy tắc Block áp dụng cho PCScanner hoặc máy do công ty quản lý, hãy nhờ quản trị viên kiểm tra; thêm quy tắc Allow có thể chưa đủ.</p>
+        <p><strong>Vẫn không kết nối được?</strong> Timeout chưa đủ để kết luận do firewall. Kiểm tra IP/cổng Desktop, tạm ngắt VPN trên cả hai thiết bị và tránh Wi-Fi khách hoặc mạng bật cách ly thiết bị. Nếu có chức năng Xuất chẩn đoán, gửi báo cáo Mobile và Desktop cho người hỗ trợ.</p>
+      </details>
+      <details><summary>Tải ứng dụng Android ở đâu?</summary><p>Chọn “Tải trên Google Play” ở mục tải ứng dụng để mở trang PCScanner và kiểm tra khả năng cài đặt trên thiết bị của bạn.</p></details>
     </section>
   </main>
-  <footer class="footer wrap"><a class="brand" href="#">PCScanner</a><p>Điện thoại quét. Máy tính nhận.</p><a href="https://apps.microsoft.com/store/detail/9NVWLB0BNMMJ?cid=DevShareMCLPCS" target="_blank" rel="noopener noreferrer">Dự án trên Microsoft Store ↗</a><a href="./privacy.html">Chính sách riêng tư</a><span>© <span id="year">2026</span> PCScanner</span></footer>
+  <footer class="footer wrap"><a class="brand" href="#">PCScanner</a><p>Điện thoại quét. Máy tính nhận.</p><a href="https://apps.microsoft.com/detail/9NVWLB0BNMMJ?hl=en-us&amp;gl=VN&amp;ocid=pdpshare" target="_blank" rel="noopener noreferrer">PCScanner trên Microsoft Store ↗</a><a href="./privacy.html">Chính sách riêng tư</a><span>© <span id="year">2026</span> PCScanner</span></footer>
 </body>
 </html>
